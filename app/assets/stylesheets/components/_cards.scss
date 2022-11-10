@@ -94,7 +94,21 @@
     }
   }
 
-  &.add-movie {
+  &.list {
+    position: relative;
+    height: 450px;
+
+    a {
+      text-decoration: none;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+  }
+
+  &.add-item {
     display: flex;
     justify-content: center;
     align-items: center;

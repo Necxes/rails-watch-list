@@ -1,13 +1,13 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col-1 py-5 off-screen sticky-top d-flex flex-column justify-content-end align-items-center">
+    <div class="col-1 py-3 py-md-5 off-screen sticky-top d-flex flex-row flex-md-column justify-content-between justify-content-md-end align-items-center">
       <h1><%= @list.name %></h1>
       <%= link_to lists_path do %>
         <i class="fa-regular fa-circle-left fa-2x"></i>
       <% end %>
     </div>
-    <div class="col-11 py-3">
-      <div class="row row-cols-3 g-3">
+    <div class="col-12 col-md-11 py-3">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
         <% @list.bookmarks.each do |bookmark| %>
           <div class="col">
             <div class="card movie" style="background-image: url(<%= bookmark.movie.poster_url %>);">
@@ -32,7 +32,7 @@
           </div>
         <% end %>
         <div class="col">
-          <div class="card movie add-movie">
+          <div class="card movie add-item">
             <i class="fa-solid fa-circle-plus fa-3x"></i>
             <%= link_to '', new_list_bookmark_path(@list) %>
           </div>

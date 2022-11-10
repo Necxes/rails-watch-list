@@ -8,10 +8,21 @@
     translate: 0 -400%;
     width: 50vh;
     text-align: left;
+    margin-bottom: 0;
   }
 
   a {
     color: white;
     text-decoration: none;
+  }
+
+  @include media-breakpoint-down(md) {
+    width: 100vw;
+    height: auto;
+
+    h1 {
+      transform: none;
+      translate: 0;
+    }
   }
 }
