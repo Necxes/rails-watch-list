@@ -1,9 +1,9 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-1 py-3 py-md-5 off-screen sticky-top d-flex flex-row flex-md-column justify-content-between justify-content-md-end align-items-center">
-      <h1><%= @list.name %></h1>
+      <h1><%= @list.name.capitalize %></h1>
       <%= link_to lists_path do %>
-        <i class="fa-regular fa-circle-left fa-2x"></i>
+        <i class="fa-regular fa-circle-left fa-fw fa-2x mt-md-1 mt-0"></i>
       <% end %>
     </div>
     <div class="col-12 col-md-11 py-3">

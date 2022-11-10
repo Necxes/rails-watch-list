@@ -1,0 +1,27 @@
+.form {
+    &-label {
+      margin-bottom: 1rem;
+      abbr[title] {
+        text-decoration: none;
+        color: $primary;
+      }
+    }
+
+    &-select,
+    &-control {
+      background-color: $off-white;
+      border-radius: .75rem;
+
+      &:focus {
+        background-color: white;
+      }
+    }
+
+    .button-list {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 1rem;
+    }
+}

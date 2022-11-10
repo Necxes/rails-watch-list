@@ -1,15 +1,15 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-1 py-3 py-md-5 off-screen sticky-top d-flex flex-row flex-md-column justify-content-between justify-content-md-end align-items-center">
-      <h1>Lists</h1>
-      <i class="fa-regular fa-circle-left fa-2x" style="opacity: 0"></i>
+      <h1>Movie lists</h1>
+      <i class="fa-solid fa-circle-play fa-fw fa-2x text-white mt-md-1 mt-0" style="opacity: 1"></i>
     </div>
     <div class="col-11 py-3">
       <div class="row row-cols-2 g-3">
         <% @lists.each do |list|  %>
           <div class="col">
             <div class="card list">
-              <%= list.name %>
+              <%= list.name.capitalize %>
               <%= link_to '', list_path(list) %>
             </div>
           </div>
