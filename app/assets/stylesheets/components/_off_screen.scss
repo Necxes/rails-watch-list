@@ -1,0 +1,17 @@
+.off-screen {
+  background-color: $light-red;
+  height: 100vh;
+
+  h1 {
+    color:white;
+    transform: rotate(-90deg);
+    translate: 0 -400%;
+    width: 50vh;
+    text-align: left;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}

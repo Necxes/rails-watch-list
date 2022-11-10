@@ -1,0 +1,43 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-1 py-5 off-screen sticky-top d-flex flex-column justify-content-end align-items-center">
+      <h1><%= @list.name %></h1>
+      <%= link_to lists_path do %>
+        <i class="fa-regular fa-circle-left fa-2x"></i>
+      <% end %>
+    </div>
+    <div class="col-11 py-3">
+      <div class="row row-cols-3 g-3">
+        <% @list.bookmarks.each do |bookmark| %>
+          <div class="col">
+            <div class="card movie" style="background-image: url(<%= bookmark.movie.poster_url %>);">
+              <div class="movie-rating <%= bookmark.movie.rating > 7 ? 'green' : 'yellow'%>">
+                <%= bookmark.movie.rating %>
+              </div>
+              <div class="movie-comment">
+                <p><%= bookmark.comment %></p>
+              </div>
+              <div class="card movie-overlay d-flex flex-column justify-content-between">
+                <div class="text-end">
+                  <%= link_to bookmark_path(bookmark), data: { turbo_method: 'delete', turbo_confirm: "Remove #{bookmark.movie.title} from #{@list.name}?" } do %>
+                    <i class="fa-regular fa-trash-can fa-lg text-white movie-overlay-delete"></i>
+                  <% end %>
+                </div>
+                <div class="movie-overlay-information">
+                  <h2><%= bookmark.movie.title%></h2>
+                  <p><%= bookmark.movie.overview %></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% end %>
+        <div class="col">
+          <div class="card movie add-movie">
+            <i class="fa-solid fa-circle-plus fa-3x"></i>
+            <%= link_to '', new_list_bookmark_path(@list) %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
