@@ -163,7 +163,7 @@
     &:hover {
       transform: scale(1.0125);
       color: $primary;
-      text-shadow: 2px,2px, 4px, black;
+      text-shadow: 0 0 4px rgba(255,255,255,.4);
 
       .list-overlay {
         opacity: 0;
