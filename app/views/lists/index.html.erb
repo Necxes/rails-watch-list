@@ -18,7 +18,8 @@
         </div>
         <% @lists.each do |list|  %>
           <div class="col">
-            <div class="card list" style="background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(<%= list.image.attached? ? cl_image_path(list.image.key) : 'https://source.unsplash.com/I6mx55jXOvM' %>); background-size:cover; background-repeat: no-repeat;">
+            <div class="card list" style="background-image: url(<%= list.image.attached? ? cl_image_path(list.image.key) : 'https://source.unsplash.com/I6mx55jXOvM' %>); background-size:cover; background-repeat: no-repeat;">
+              <div class="list-overlay"></div>
               <%= list.name.capitalize %>
               <%= link_to '', list_path(list) %>
             </div>

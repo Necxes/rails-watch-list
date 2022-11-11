@@ -140,6 +140,17 @@
       width: 100%;
     }
 
+    .list-overlay {
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      opacity: .6;
+      background: black;
+    }
+
     &.no-hover {
       transition: none;
 
@@ -152,6 +163,11 @@
     &:hover {
       transform: scale(1.0125);
       color: $primary;
+      text-shadow: 2px,2px, 4px, black;
+
+      .list-overlay {
+        opacity: 0;
+      }
     }
   }
 
