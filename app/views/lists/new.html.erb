@@ -6,6 +6,7 @@
           <h1 class="mb-4">Create a new <span class="text-primary">list</span></h1>
           <%= simple_form_for @list do |f| %>
             <%= f.input :name %>
+            <%= f.input :image, as: :file %>
             <div class="button-list">
               <%= link_to "Cancel", :back %>
               <%= f.submit 'Add list', class: 'btn btn-primary' %>
