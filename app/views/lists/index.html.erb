@@ -20,6 +20,9 @@
           <div class="col">
             <div class="card list" style="background-image: url(<%= list.image.attached? ? cl_image_path(list.image.key) : 'https://source.unsplash.com/I6mx55jXOvM' %>); background-size:cover; background-repeat: no-repeat;">
               <div class="list-overlay"></div>
+              <% if list.movies.length != 0 %>
+                <span class="list-overlay-count text-end"><%= list.movies.length %> movie<%= list.movies.length > 1 ? 's' : '' %></span>
+              <% end%>
               <%= list.name.capitalize %>
               <%= link_to '', list_path(list) %>
             </div>

@@ -148,7 +148,18 @@
       left: 0;
       width: 100%;
       opacity: .6;
+      border-radius: 1rem;
       background: black;
+      transition: opacity ease-in-out .2s;
+
+      &-count {
+        position: absolute;
+        top: 0.5rem;
+        right: 1.5rem;
+        font-size: 1rem;
+        opacity: 1;
+        transition: opacity ease-in-out .1s;
+      }
     }
 
     &.no-hover {
@@ -163,10 +174,15 @@
     &:hover {
       transform: scale(1.0125);
       color: $primary;
-      text-shadow: 0 0 4px rgba(255,255,255,.4);
+      text-shadow: 0 0 4px rgba(0,0,0,.4);
 
       .list-overlay {
         opacity: 0;
+
+        &-count {
+          color: white;
+          opacity: 0;
+        }
       }
     }
   }
