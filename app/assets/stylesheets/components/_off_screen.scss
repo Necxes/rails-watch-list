@@ -23,6 +23,12 @@
     a {
       color: white;
       text-decoration: none;
+      opacity: 1;
+      transition: opacity ease-in-out .1s;
+
+      &:hover {
+        opacity: .7;
+      }
     }
 
     @include media-breakpoint-down(md) {
