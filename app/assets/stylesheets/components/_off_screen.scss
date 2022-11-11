@@ -2,28 +2,42 @@
   background-color: $light-red;
   height: 100vh;
 
-  h1 {
-    color:white;
-    transform: rotate(-90deg);
-    translate: 0 -450%;
-    width: 50vh;
-    text-align: left;
-    margin-bottom: 0;
-    font-size: calc(1.075rem + 1.5vw);
-  }
+  .off-screen-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    height: -webkit-fill-available;
 
-  a {
-    color: white;
-    text-decoration: none;
+    h1 {
+      color:white;
+      transform-origin: left;
+      transform: translateY(0)
+      translateX(50%) rotate(-90deg);
+      text-align: left;
+      margin: 0;
+      font-size: 2rem;
+      white-space: nowrap;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+
+    @include media-breakpoint-down(md) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      h1 {
+        transform: none;
+        translate: 0;
+      }
+    }
   }
 
   @include media-breakpoint-down(md) {
-    width: 100vw;
     height: auto;
-
-    h1 {
-      transform: none;
-      translate: 0;
-    }
   }
 }
