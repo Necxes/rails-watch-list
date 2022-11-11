@@ -176,6 +176,10 @@
       color: $primary;
       text-shadow: 0 0 4px rgba(0,0,0,.4);
 
+      i {
+        text-shadow: none;
+      }
+
       .list-overlay {
         opacity: 0;
 
