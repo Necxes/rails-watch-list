@@ -44,6 +44,6 @@
   }
 
   @include media-breakpoint-down(md) {
-    height: auto;
+    height: fit-content;
   }
 }
