@@ -1,24 +1,45 @@
-# README
+# Watchlist app
+A 3-model app which allows user to save their favorite movie list.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+App home: https://patrick-watch-it.herokuapp.com/
 
-Things you may want to cover:
+# Getting Started
+## Setup
+### Install gems
 
-* Ruby version
+`bundle install`
 
-* System dependencies
+Install JS packages
 
-* Configuration
+`yarn install`
 
-* Database creation
+ENV Variables
+Create .env file
 
-* Database initialization
+`touch .env`
 
-* How to run the test suite
+Inside .env, set these variables. For any APIs, see group Slack channel.
 
-* Services (job queues, cache servers, search engines, etc.)
+`CLOUDINARY_URL=your_own_cloudinary_url_key`
 
-* Deployment instructions
+DB Setup
 
-* ...
+`rails db:create`
+`rails db:migrate`
+`rails db:seed`
+
+Run a server
+`rails s`
+
+# Built With
+Rails 7 - Backend / Front-end
+Stimulus JS - Front-end JS
+Heroku - Deployment
+PostgreSQL - Database
+Bootstrap — Styling
+
+# Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+# License
+This project is licensed under the MIT License
